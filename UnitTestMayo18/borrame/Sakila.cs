@@ -1,21 +1,19 @@
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
-using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 
-namespace ConsoleApp1.sql
+namespace UnitTestMayo18.borrame
 {
-    [ExcludeFromCodeCoverage]
-    public partial class Model1 : DbContext, IModel1
+    public partial class Sakila : DbContext
     {
-        public Model1()
-            : base("name=Model1")
+        public Sakila()
+            : base("name=Sakila")
         {
         }
 
-        public IDbSet<city> city { get; set; }
-        
+        public virtual DbSet<city> city { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<city>()

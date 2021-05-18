@@ -1,8 +1,8 @@
 ﻿using System.Data.Entity;
 
-namespace ConsoleApp1.sql
+namespace Mayo18.DB
 {
-    public interface IModel1
+    public interface ISakila
     {
         IDbSet<city> city { get; set; }
     }

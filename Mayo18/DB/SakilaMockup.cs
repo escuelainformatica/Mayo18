@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
-namespace ConsoleApp1.sql
+namespace Mayo18.DB
 {
-    public class Model1Mockup : IModel1
+    public class SakilaMockup : ISakila
     {
         public virtual IDbSet<city> city { get; set; }=new FakeDbSet<city>();
     }

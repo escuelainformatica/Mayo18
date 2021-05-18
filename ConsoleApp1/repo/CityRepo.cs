@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1.repo
 {
-    class CityRepo
+    public class CityRepo
     {
         public IModel1 contexto {set; get;}
 
@@ -21,6 +21,15 @@ namespace ConsoleApp1.repo
             var resultado=new List<city>();
             resultado=contexto.city.ToList();         
             return resultado;
+        }
+        public int ObtenerTotal()
+        {
+            city ciudad=new city {city1="nombre",country_id=4};
+            city ciudad2=new city {city1="nombre",country_id=50};
+            contexto.city.Add(ciudad);
+            contexto.city.Add(ciudad2);
+            var total=contexto.city.ToList().Sum(c=>c.country_id);
+            return total;
         }
     }
 }
