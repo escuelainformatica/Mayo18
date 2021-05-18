@@ -130,6 +130,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="repo\CityRepo.cs" />
+    <Compile Include="servicio\ClaseServicio.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
